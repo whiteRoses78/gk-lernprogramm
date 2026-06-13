@@ -49,11 +49,30 @@ window.LESSON_DATA = (window.LESSON_DATA || []).concat([
             <td>Menschen ziehen <strong>aus einem Land heraus</strong> (z.B. weg aus Syrien).</td></tr>
         </table>
 
+        <svg viewBox="0 0 360 110" role="img" aria-label="Immigration ist Einwanderung in ein Land, Emigration ist Auswanderung aus einem Land" style="max-width:340px;width:100%;height:auto;display:block;margin:1rem auto;font-family:sans-serif;">
+          <rect x="135" y="32" width="90" height="48" rx="6" fill="#eff6ff" stroke="#2563EB" stroke-width="2"/>
+          <text x="180" y="61" text-anchor="middle" font-size="13" fill="#1d4ed8" font-weight="bold">Land</text>
+          <line x1="48" y1="48" x2="125" y2="48" stroke="#16a34a" stroke-width="3"/>
+          <polygon points="125,43 135,48 125,53" fill="#16a34a"/>
+          <text x="44" y="38" font-size="12" fill="#16a34a" font-weight="bold">Immigration</text>
+          <text x="44" y="68" font-size="10" fill="#16a34a">= rein</text>
+          <line x1="225" y1="66" x2="302" y2="66" stroke="#dc2626" stroke-width="3"/>
+          <polygon points="302,61 312,66 302,71" fill="#dc2626"/>
+          <text x="232" y="56" font-size="12" fill="#dc2626" font-weight="bold">Emigration</text>
+          <text x="232" y="86" font-size="10" fill="#dc2626">= raus</text>
+        </svg>
+
         <div class="tip-box">
           <strong>Eselsbrücke:</strong> <strong>Im</strong>migration = <strong>in</strong> ein Land hinein
           (wie "in"). <strong>E</strong>migration = hinaus, raus (wie der "Exit"-Ausgang). Ein und derselbe
           Mensch ist oft beides: Wer aus Syrien <em>auswandert</em> (Emigration), <em>wandert</em> zugleich
           nach Deutschland <em>ein</em> (Immigration).
+        </div>
+
+        <div class="warning-box">
+          <strong>Typischer Fehler:</strong> Bei der Definition das Wort <strong>dauerhaft</strong>
+          vergessen! Ohne "dauerhaft" wären auch Touristen Migranten. Und verwechsle nicht
+          <strong>Im</strong>migration (rein) mit <strong>E</strong>migration (raus).
         </div>
 
         <div class="why-context">
@@ -150,6 +169,22 @@ window.LESSON_DATA = (window.LESSON_DATA || []).concat([
           besser und lockt dich an).
         </div>
 
+        <svg viewBox="0 0 380 130" role="img" aria-label="Push-Faktoren treiben aus der Heimat weg, Pull-Faktoren ziehen ins neue Land" style="max-width:360px;width:100%;height:auto;display:block;margin:1rem auto;font-family:sans-serif;">
+          <text x="60" y="22" text-anchor="middle" font-size="12" fill="#dc2626" font-weight="bold">Heimat</text>
+          <text x="320" y="22" text-anchor="middle" font-size="12" fill="#16a34a" font-weight="bold">neues Land</text>
+          <rect x="170" y="30" width="44" height="82" rx="3" fill="#f3f4f6" stroke="#6b7280" stroke-width="2"/>
+          <circle cx="205" cy="72" r="3" fill="#6b7280"/>
+          <text x="192" y="126" text-anchor="middle" font-size="10" fill="#6b7280">Grenze</text>
+          <line x1="35" y1="64" x2="120" y2="64" stroke="#dc2626" stroke-width="3"/>
+          <polygon points="120,59 130,64 120,69" fill="#dc2626"/>
+          <text x="44" y="52" font-size="13" fill="#dc2626" font-weight="bold">PUSH</text>
+          <text x="33" y="84" font-size="10" fill="#dc2626">treibt weg</text>
+          <line x1="248" y1="64" x2="333" y2="64" stroke="#16a34a" stroke-width="3"/>
+          <polygon points="333,59 343,64 333,69" fill="#16a34a"/>
+          <text x="286" y="52" font-size="13" fill="#16a34a" font-weight="bold">PULL</text>
+          <text x="284" y="84" font-size="10" fill="#16a34a">zieht an</text>
+        </svg>
+
         <h3>Push-Faktoren (Gründe wegzugehen)</h3>
         <p>Das sind Gründe, die Menschen dazu bringen, ihre Heimat zu <strong>verlassen</strong>. Man kann sie
         in drei Arten einteilen:</p>
@@ -175,6 +210,12 @@ window.LESSON_DATA = (window.LESSON_DATA || []).concat([
           <em>weg</em> (etwas Schlechtes in der Heimat) oder zieht er sie <em>an</em> (etwas Gutes im Zielland)?
           Krieg drückt weg = Push. Sicherheit zieht an = Pull. Dieselbe Sache, zwei Seiten:
           <em>Krieg</em> (Push) und <em>Sicherheit</em> (Pull) gehören zusammen.
+        </div>
+
+        <div class="why-context">
+          <strong>Warum lernen wir das?</strong> Push und Pull sind ein sicherer Punktebringer in der
+          Arbeit. Oft musst du Beispiele <em>selbst nennen</em> oder einordnen - dann zählt, dass du die
+          drei Push-Bereiche (politisch, wirtschaftlich, Umwelt) parat hast.
         </div>
 
         <div class="warning-box">
@@ -228,6 +269,18 @@ window.LESSON_DATA = (window.LESSON_DATA || []).concat([
           { left: "Sicherheit und gute Jobs", right: "Pull-Faktor" }
         ],
         explanation: "Die drei Push-Arten: politisch, wirtschaftlich, Umwelt. Pull = die guten Lebensbedingungen im Zielland."
+      },
+      {
+        type: "fill-in-blank",
+        question: "<strong>Prüfungsnah:</strong> Nenne je einen Push-Faktor aus den drei Bereichen.",
+        text: "politisch: {{blank}} &nbsp;|&nbsp; wirtschaftlich: {{blank}} &nbsp;|&nbsp; Umwelt: {{blank}}",
+        prompts: ["z.B. Krieg", "z.B. Armut", "z.B. Dürre"],
+        blanks: [
+          { correct: "Krieg", alternatives: ["krieg", "Verfolgung", "verfolgung", "Unterdrückung", "unterdrückung"] },
+          { correct: "Armut", alternatives: ["armut", "Arbeitslosigkeit", "arbeitslosigkeit", "Hunger", "hunger"] },
+          { correct: "Dürre", alternatives: ["dürre", "Flut", "flut", "Flutkatastrophe", "Unwetter", "unwetter", "Erdrutsch", "Naturkatastrophe"] }
+        ],
+        explanation: "Politisch: Krieg/Verfolgung. Wirtschaftlich: Armut/Arbeitslosigkeit/Hunger. Umwelt: Dürre/Flut/Unwetter. (Das ist Aufgabe 6a der Probe-Arbeit.)"
       },
       {
         type: "fill-in-blank",
@@ -314,6 +367,12 @@ window.LESSON_DATA = (window.LESSON_DATA || []).concat([
           und Sozialabgaben als Kosten), <strong>Arbeitskräfte</strong> (gegen den Fachkräftemangel) und
           <strong>Vielfalt</strong> - und hilft gegen die Überalterung.
         </div>
+
+        <div class="warning-box">
+          <strong>Vorsicht vor dem Trugschluss:</strong> Der Stammtisch-Spruch "Ausländer kosten nur Geld"
+          ist <strong>falsch</strong> - der Text M2 beweist mit Zahlen das Gegenteil. Zuwanderer zahlen
+          unterm Strich <strong>mehr</strong> ein, als sie an Leistungen bekommen.
+        </div>
       `
     },
     example: {
@@ -372,8 +431,8 @@ window.LESSON_DATA = (window.LESSON_DATA || []).concat([
         question: "Ergänze: Was sind Sozialabgaben?",
         text: "Sozialabgaben sind die Beiträge zur gesetzlichen {{blank}}-, Renten- und {{blank}}versicherung.",
         blanks: [
-          { correct: "Kranken", alternatives: ["kranken", "Krankenversicherung"] },
-          { correct: "Arbeitslosen", alternatives: ["arbeitslosen", "Arbeitslosenversicherung"] }
+          { correct: "Kranken", alternatives: ["kranken"] },
+          { correct: "Arbeitslosen", alternatives: ["arbeitslosen"] }
         ],
         explanation: "Sozialabgaben = Kranken-, Renten- und Arbeitslosenversicherung."
       },

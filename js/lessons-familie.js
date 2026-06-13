@@ -33,6 +33,19 @@ window.LESSON_DATA = (window.LESSON_DATA || []).concat([
           fast nie ein - jeder spielt, wie er will.
         </div>
 
+        <svg viewBox="0 0 420 92" role="img" aria-label="Spektrum der Erziehungsstile: autoritaer hat viele Regeln, permissiv keine, demokratisch liegt als Mittelweg dazwischen" style="max-width:400px;width:100%;height:auto;display:block;margin:1rem auto;font-family:sans-serif;">
+          <line x1="45" y1="42" x2="375" y2="42" stroke="#9ca3af" stroke-width="3"/>
+          <text x="45" y="20" font-size="11" fill="#6b7280">viele Regeln</text>
+          <text x="375" y="20" text-anchor="end" font-size="11" fill="#6b7280">keine Regeln</text>
+          <circle cx="75" cy="42" r="8" fill="#dc2626"/>
+          <circle cx="210" cy="42" r="10" fill="#16a34a"/>
+          <circle cx="345" cy="42" r="8" fill="#ca8a04"/>
+          <text x="75" y="68" text-anchor="middle" font-size="12" fill="#dc2626" font-weight="bold">autoritär</text>
+          <text x="210" y="68" text-anchor="middle" font-size="12" fill="#16a34a" font-weight="bold">demokratisch</text>
+          <text x="345" y="68" text-anchor="middle" font-size="12" fill="#ca8a04" font-weight="bold">permissiv</text>
+          <text x="210" y="85" text-anchor="middle" font-size="10" fill="#16a34a">der goldene Mittelweg</text>
+        </svg>
+
         <h3>1. Autoritärer Erziehungsstil</h3>
         <p><em>"Du machst das, weil ich es sage!"</em> Hier gilt <strong>Befehl und Gehorsam</strong>.
         Die Eltern bestimmen, das Kind hat zu folgen. Auf die Wünsche des Kindes wird wenig Rücksicht
@@ -345,12 +358,25 @@ window.LESSON_DATA = (window.LESSON_DATA || []).concat([
           Leistung: Ist es Geld, Zeit oder ein Platz?
         </div>
 
+        <svg viewBox="0 0 420 118" role="img" aria-label="Drei Schubladen: Geld (Kindergeld, Elterngeld), Zeit (Elternzeit), Platz (Betreuungsplatz)" style="max-width:400px;width:100%;height:auto;display:block;margin:1rem auto;font-family:sans-serif;">
+          <rect x="12" y="22" width="124" height="84" rx="8" fill="#eff6ff" stroke="#2563EB" stroke-width="2"/>
+          <text x="74" y="46" text-anchor="middle" font-size="14" fill="#1d4ed8" font-weight="bold">GELD</text>
+          <text x="74" y="70" text-anchor="middle" font-size="11" fill="#1f2937">Kindergeld</text>
+          <text x="74" y="88" text-anchor="middle" font-size="11" fill="#1f2937">Elterngeld</text>
+          <rect x="148" y="22" width="124" height="84" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+          <text x="210" y="46" text-anchor="middle" font-size="14" fill="#15803d" font-weight="bold">ZEIT</text>
+          <text x="210" y="74" text-anchor="middle" font-size="11" fill="#1f2937">Elternzeit</text>
+          <rect x="284" y="22" width="124" height="84" rx="8" fill="#fef3c7" stroke="#ca8a04" stroke-width="2"/>
+          <text x="346" y="46" text-anchor="middle" font-size="14" fill="#a16207" font-weight="bold">PLATZ</text>
+          <text x="346" y="74" text-anchor="middle" font-size="10.5" fill="#1f2937">Betreuungsplatz</text>
+        </svg>
+
         <h3>Die vier wichtigsten Leistungen</h3>
         <table class="icon-table">
           <tr><th>Leistung</th><th>Was ist das?</th></tr>
           <tr>
             <td><strong>Kindergeld</strong><br><span class="hinweis">(Geld)</span></td>
-            <td>Der Staat zahlt <strong>jeden Monat Geld pro Kind</strong> (rund 250 € im Monat).
+            <td>Der Staat zahlt <strong>jeden Monat Geld pro Kind</strong> (rund 255 € im Monat).
             Es gibt das Kindergeld bis 18 - und weiter bis 25, wenn das Kind noch in der
             <strong>Ausbildung</strong> oder im Studium ist.</td>
           </tr>
