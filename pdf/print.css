@@ -1,0 +1,96 @@
+/* Gemeinsames Druck-Stylesheet fuer das Englisch-KA4-Lernpaket.
+   A4, klare Struktur, korrekte Umlaute, genug Schreibplatz. */
+
+@page { size: A4; margin: 16mm 15mm; }
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #1a1a1a;
+  font-size: 11.5pt;
+  line-height: 1.5;
+  margin: 0;
+}
+
+h1 {
+  font-size: 19pt;
+  color: #1d4ed8;
+  margin: 0 0 2mm;
+}
+h2 {
+  font-size: 14pt;
+  color: #1d4ed8;
+  margin: 7mm 0 2mm;
+  border-bottom: 2px solid #1d4ed8;
+  padding-bottom: 1mm;
+}
+h3 { font-size: 12pt; margin: 4mm 0 1.5mm; }
+
+.kopf {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 3px solid #1d4ed8;
+  padding-bottom: 2mm;
+  margin-bottom: 4mm;
+}
+.kopf .meta { font-size: 10pt; color: #555; text-align: right; }
+
+.intro { font-size: 10.5pt; color: #333; margin-bottom: 4mm; }
+
+.name-zeile {
+  font-size: 10.5pt;
+  margin-bottom: 4mm;
+  color: #333;
+}
+
+/* Tabellen */
+table { width: 100%; border-collapse: collapse; margin: 2mm 0 4mm; }
+th, td { border: 1px solid #bbb; padding: 2mm 3mm; text-align: left; vertical-align: top; }
+th { background: #e8eefc; font-size: 10.5pt; }
+td.en { font-weight: 600; width: 42%; }
+td.de { width: 46%; }
+td.chk { width: 12%; text-align: center; color: #999; }
+
+/* Vokabel-Lernblatt: Falt-/Abdeck-Hinweis */
+.fold-hint {
+  font-size: 9.5pt; color: #1d4ed8; background: #eff6ff;
+  border: 1px dashed #1d4ed8; padding: 2mm 3mm; border-radius: 3px;
+  margin-bottom: 4mm;
+}
+
+/* Boxen */
+.box { border: 1px solid #ccc; border-radius: 4px; padding: 3mm 4mm; margin: 3mm 0; }
+.box-rule { background: #f7f9ff; border-color: #c3d3f7; }
+.box-tip { background: #fffbeb; border-color: #f1d58a; }
+.box-warn { background: #fef2f2; border-color: #f3b4b4; }
+.box h3 { margin-top: 0; }
+
+.beispiel { font-style: italic; color: #1d4ed8; }
+.signal { font-weight: 600; }
+code { background: #eee; padding: 0 2px; border-radius: 2px; font-size: 10.5pt; }
+
+/* Aufgaben / Schreiblinien */
+ol.aufgaben { margin: 0 0 4mm; padding-left: 6mm; }
+ol.aufgaben > li { margin-bottom: 3.5mm; }
+.luecke {
+  display: inline-block; min-width: 38mm; border-bottom: 1.2px solid #444;
+  height: 5mm; vertical-align: bottom;
+}
+.luecke-kurz { min-width: 22mm; }
+.luecke-lang { min-width: 55mm; }
+.schreiblinie { border-bottom: 1px solid #999; height: 8mm; margin: 0; }
+.schreibfeld { margin-top: 2mm; }
+.hinweis { font-size: 10pt; color: #666; }
+.punkte { float: right; font-size: 9.5pt; color: #888; font-weight: 600; }
+
+/* Loesungen */
+.loesung { color: #166534; font-weight: 600; }
+.loesungen-seite { page-break-before: always; }
+.loesungen-seite h1 { color: #166534; }
+.loesungen-seite h2 { color: #166534; border-bottom-color: #166534; }
+
+.seitenumbruch { page-break-before: always; }
+.fuss { margin-top: 6mm; font-size: 9pt; color: #888; text-align: center; }
+.zwei-spalten { column-count: 2; column-gap: 8mm; }
