@@ -344,7 +344,7 @@ window.LESSON_DATA = (window.LESSON_DATA || []).concat([
 
         <div class="info-card">
           <strong>Was sind Sozialabgaben?</strong> Das sind die <strong>Beiträge zur gesetzlichen
-          Kranken-, Renten- und Arbeitslosenversicherung</strong>. Wer arbeitet, zahlt davon
+          Kranken-, Renten-, Arbeitslosen- und Pflegeversicherung</strong>. Wer arbeitet, zahlt davon
           automatisch jeden Monat einen Teil.
         </div>
 
@@ -429,12 +429,12 @@ window.LESSON_DATA = (window.LESSON_DATA || []).concat([
       {
         type: "fill-in-blank",
         question: "Ergänze: Was sind Sozialabgaben?",
-        text: "Sozialabgaben sind die Beiträge zur gesetzlichen {{blank}}-, Renten- und {{blank}}versicherung.",
+        text: "Sozialabgaben sind die Beiträge zur gesetzlichen {{blank}}-, Renten-, Arbeitslosen- und {{blank}}versicherung.",
         blanks: [
           { correct: "Kranken", alternatives: ["kranken"] },
-          { correct: "Arbeitslosen", alternatives: ["arbeitslosen"] }
+          { correct: "Pflege", alternatives: ["pflege"] }
         ],
-        explanation: "Sozialabgaben = Kranken-, Renten- und Arbeitslosenversicherung."
+        explanation: "Sozialabgaben = Kranken-, Renten-, Arbeitslosen- und Pflegeversicherung (die vier großen Sozialversicherungen)."
       },
       {
         type: "free-text",
