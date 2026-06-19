@@ -7,33 +7,37 @@
 <style>
   /* Mittelfalz-Karteikarten: einseitig drucken, ausschneiden, in der Mitte
      nach HINTEN falten. Begriff unten (vorne), Antwort oben kopfüber -
-     nach dem Falten steht die Antwort hinten richtig herum. Zwei Lagen =
-     blickdicht & stabil, kein Duplexdrucker nötig. */
+     nach dem Falten steht die Antwort hinten richtig herum.
+
+     Wichtig fürs Drucken: Je zwei Karten stecken in einer .reihe (Block-Element).
+     break-inside: avoid wirkt darauf zuverlässig -> eine Karte wird NIE über
+     einen Seitenumbruch zerrissen, es bricht nur zwischen den Zeilen um. */
   .anleitung {
     background: #eff6ff; border: 1px dashed #1d4ed8; border-radius: 4px;
-    padding: 3mm 4mm; font-size: 10pt; color: #1d4ed8; margin-bottom: 5mm;
+    padding: 2.5mm 4mm; font-size: 9.5pt; color: #1d4ed8; margin-bottom: 4mm;
   }
-  .karten-grid { display: flex; flex-wrap: wrap; gap: 5mm; }
   .gruppe-titel {
-    width: 100%; font-size: 10pt; color: #1d4ed8; font-weight: 700; text-transform: uppercase;
-    letter-spacing: .5px; margin: 4mm 0 1mm; border-bottom: 1px solid #c3d3f7; padding-bottom: 1mm;
+    font-size: 10pt; color: #1d4ed8; font-weight: 700; text-transform: uppercase;
+    letter-spacing: .5px; margin: 3mm 0 2mm; border-bottom: 1px solid #c3d3f7; padding-bottom: 1mm;
+    break-after: avoid; page-break-after: avoid;
   }
-  .karte {
-    width: calc(50% - 2.6mm); border: 1.4px solid #333;
-    page-break-inside: avoid; break-inside: avoid;
+  .reihe {
+    display: flex; gap: 5mm; margin-bottom: 4mm;
+    break-inside: avoid; page-break-inside: avoid;
   }
+  .karte { width: calc(50% - 2.5mm); border: 1.4px solid #333; }
   .haelfte {
-    height: 32mm; box-sizing: border-box; padding: 3mm 4mm; overflow: hidden;
+    height: 27mm; box-sizing: border-box; padding: 2.5mm 4mm; overflow: hidden;
     display: flex; flex-direction: column; justify-content: center;
   }
   /* Obere Hälfte = Antwort, kopfüber gedruckt */
-  .antwort { transform: rotate(180deg); font-size: 9pt; line-height: 1.35; }
+  .antwort { transform: rotate(180deg); font-size: 9pt; line-height: 1.3; }
   /* Untere Hälfte = Begriff (Vorderseite), Faltlinie als obere Kante */
   .begriff { border-top: 1.5px dashed #999; text-align: center; }
   .begriff .kategorie {
     font-size: 7.5pt; color: #888; text-transform: uppercase; letter-spacing: .6px; margin-bottom: 1.5mm;
   }
-  .begriff .wort { font-weight: 700; font-size: 13pt; color: #1d4ed8; }
+  .begriff .wort { font-weight: 700; font-size: 12.5pt; color: #1d4ed8; }
   .antwort .plus { color: #166534; font-weight: 600; }
   .antwort .minus { color: #b91c1c; font-weight: 600; }
   .antwort .art {
@@ -56,127 +60,125 @@
   kopfüber gedruckt; durch das Falten steht sie korrekt. Zwei Papierlagen = blickdicht &amp; stabil.
 </div>
 
-<div class="karten-grid">
-
-  <div class="gruppe-titel">Erziehungsstile</div>
-
+<div class="gruppe-titel">Erziehungsstile</div>
+<div class="reihe">
   <div class="karte">
     <div class="haelfte antwort"><div>Befehl und Gehorsam, strenge Regeln, Strafen ("Mach das sofort!").
       <span class="plus">+ klare Regeln</span> <span class="minus">&ndash; Angst, unselbstständig</span></div></div>
     <div class="haelfte begriff"><div class="kategorie">Erziehungsstil</div><div class="wort">autoritär</div></div>
   </div>
-
   <div class="karte">
     <div class="haelfte antwort"><div>Augenhöhe, Mitsprache, Regeln werden begründet, gemeinsam Konflikte lösen.
       <span class="plus">+ selbstständig &amp; sicher</span> <span class="minus">&ndash; braucht Zeit</span>.
       <strong>Der beste Stil.</strong></div></div>
     <div class="haelfte begriff"><div class="kategorie">Erziehungsstil</div><div class="wort">demokratisch</div></div>
   </div>
-
+</div>
+<div class="reihe">
   <div class="karte">
     <div class="haelfte antwort"><div>Eltern halten sich zurück, kaum Regeln ("Mach, wenn du möchtest").
       <span class="plus">+ viel Freiheit</span> <span class="minus">&ndash; keine Orientierung</span></div></div>
     <div class="haelfte begriff"><div class="kategorie">Erziehungsstil</div><div class="wort">permissiv</div></div>
   </div>
-
   <div class="karte">
     <div class="haelfte antwort"><div>Der <strong>demokratische</strong>: Er verbindet klare Grenzen (wie autoritär)
       mit Freiheit und Mitsprache (wie permissiv) - der goldene Mittelweg.</div></div>
     <div class="haelfte begriff"><div class="kategorie">Merkfrage</div><div class="wort">Welcher Stil ist am besten?</div></div>
   </div>
+</div>
 
-  <div class="gruppe-titel">Familienformen</div>
-
+<div class="gruppe-titel">Familienformen</div>
+<div class="reihe">
   <div class="karte">
     <div class="haelfte antwort"><div>Eltern mit ihren eigenen, minderjährigen Kindern.</div></div>
     <div class="haelfte begriff"><div class="kategorie">Familienform</div><div class="wort">Kernfamilie</div></div>
   </div>
-
   <div class="karte">
     <div class="haelfte antwort"><div>Mehrere Generationen zusammen (z.B. Großeltern + Eltern + Kinder).</div></div>
     <div class="haelfte begriff"><div class="kategorie">Familienform</div><div class="wort">Großfamilie</div></div>
   </div>
-
+</div>
+<div class="reihe">
   <div class="karte">
     <div class="haelfte antwort"><div>Kinder stammen aus früheren Beziehungen der Eltern ("zusammengeflickt").</div></div>
     <div class="haelfte begriff"><div class="kategorie">Familienform</div><div class="wort">Patchworkfamilie</div></div>
   </div>
-
   <div class="karte">
     <div class="haelfte antwort"><div>Zwei gleichgeschlechtliche Eltern (zwei Mütter oder zwei Väter).</div></div>
     <div class="haelfte begriff"><div class="kategorie">Familienform</div><div class="wort">Regenbogenfamilie</div></div>
   </div>
-
+</div>
+<div class="reihe">
   <div class="karte">
     <div class="haelfte antwort"><div>Ein Elternteil lebt allein mit dem Kind / den Kindern.</div></div>
     <div class="haelfte begriff"><div class="kategorie">Familienform</div><div class="wort">Alleinerziehende</div></div>
   </div>
+</div>
 
-  <div class="gruppe-titel">Familienpolitik - "Nicht-Familie" (M1, S. 134)</div>
-
+<div class="gruppe-titel">Familienpolitik - "Nicht-Familie" (M1, S. 134)</div>
+<div class="reihe">
   <div class="karte">
     <div class="haelfte antwort"><div>Monatlich Geld pro Kind, bis 18 - in Ausbildung bis 25. <span class="art">Geld</span></div></div>
     <div class="haelfte begriff"><div class="kategorie">staatliche Leistung</div><div class="wort">Kindergeld</div></div>
   </div>
-
   <div class="karte">
     <div class="haelfte antwort"><div>Ersetzt einen Teil des fehlenden Lohns nach der Geburt (bis 14 Monate). <span class="art">Geld</span></div></div>
     <div class="haelfte begriff"><div class="kategorie">staatliche Leistung</div><div class="wort">Elterngeld</div></div>
   </div>
-
+</div>
+<div class="reihe">
   <div class="karte">
     <div class="haelfte antwort"><div>Freistellung von der Arbeit bis zu 3 Jahre, der Arbeitsplatz bleibt sicher. <span class="art">Zeit</span></div></div>
     <div class="haelfte begriff"><div class="kategorie">staatliche Leistung</div><div class="wort">Elternzeit</div></div>
   </div>
-
   <div class="karte">
     <div class="haelfte antwort"><div>Recht auf einen Kita-Platz ab dem vollendeten 1. Lebensjahr. <span class="art">Platz</span></div></div>
     <div class="haelfte begriff"><div class="kategorie">staatliche Leistung</div><div class="wort">Betreuungsplatz</div></div>
   </div>
+</div>
 
-  <div class="gruppe-titel">Migration</div>
-
+<div class="gruppe-titel">Migration</div>
+<div class="reihe">
   <div class="karte">
     <div class="haelfte antwort"><div><strong>Dauerhafte</strong> Verlegung des Wohnsitzes über eine <strong>Grenze</strong> hinweg.
       Touristen sind keine Migranten (nur vorübergehend weg).</div></div>
     <div class="haelfte begriff"><div class="kategorie">Begriff</div><div class="wort">Migration</div></div>
   </div>
-
   <div class="karte">
     <div class="haelfte antwort"><div>Einwanderung - <strong>in</strong> ein Land hinein.</div></div>
     <div class="haelfte begriff"><div class="kategorie">Begriff</div><div class="wort">Immigration</div></div>
   </div>
-
+</div>
+<div class="reihe">
   <div class="karte">
     <div class="haelfte antwort"><div>Auswanderung - aus einem Land hinaus (wie "Exit").</div></div>
     <div class="haelfte begriff"><div class="kategorie">Begriff</div><div class="wort">Emigration</div></div>
   </div>
+</div>
 
-  <div class="gruppe-titel">Push, Pull &amp; Folgen</div>
-
+<div class="gruppe-titel">Push, Pull &amp; Folgen</div>
+<div class="reihe">
   <div class="karte">
     <div class="haelfte antwort"><div>Treiben aus der Heimat <em>weg</em>: politisch (Krieg, Verfolgung),
       wirtschaftlich (Armut, Arbeitslosigkeit), Umwelt (Dürre, Flut).</div></div>
     <div class="haelfte begriff"><div class="kategorie">Migration</div><div class="wort">Push-Faktoren</div></div>
   </div>
-
   <div class="karte">
     <div class="haelfte antwort"><div>Ziehen ins Zielland <em>hin</em>: Sicherheit, Arbeitsplätze, gute Schulbildung,
       mit der Familie zusammenleben.</div></div>
     <div class="haelfte begriff"><div class="kategorie">Migration</div><div class="wort">Pull-Faktoren</div></div>
   </div>
-
+</div>
+<div class="reihe">
   <div class="karte">
     <div class="haelfte antwort"><div><strong>Geld</strong> (mehr Steuern/Sozialabgaben als Kosten = Nettogewinn),
       <strong>Arbeitskräfte</strong> (Fachkräftemangel), gegen die <strong>Überalterung</strong>, <strong>Vielfalt</strong>.</div></div>
     <div class="haelfte begriff"><div class="kategorie">M2 "Profitabel"</div><div class="wort">Positive Folgen der Zuwanderung</div></div>
   </div>
-
   <div class="karte">
     <div class="haelfte antwort"><div>Beiträge zur gesetzlichen Kranken-, Renten-, Arbeitslosen- und Pflegeversicherung.</div></div>
     <div class="haelfte begriff"><div class="kategorie">Begriff</div><div class="wort">Sozialabgaben</div></div>
   </div>
-
 </div>
 
 <div class="fuss">GK-Lernpaket | Familie, Erziehung &amp; Migration</div>
